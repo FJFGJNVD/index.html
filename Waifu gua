@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Waifu Gua</title>
+  <style>
+    img {
+      width: 280px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+    button {
+      margin: 5px;
+      padding: 8px 12px;
+      border-radius: 6px;
+      border: none;
+      background-color: #ffa7c4;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <center>
+    <h2>Waifu Gua</h2>
+    <img id="waifuImg" src="https://i.postimg.cc/HnmZjng1/IMG-20250426-WA0034.jpg" alt="Waifu 1">
+    <br>
+    <button onclick="gantiWaifu(0)">Waifu 1</button>
+    <button onclick="gantiWaifu(1)">Waifu 2</button>
+    <button onclick="gantiWaifu(2)">Waifu 3</button>
+  </center>
+
+  <!-- Audio player (sembunyiin) -->
+  <audio id="waifuSound">
+    <source src="https://media.vocaroo.com/mp3/1oVjWndUqJ4s" type="audio/mpeg">
+    Browser kamu nggak support audio.
+  </audio>
+
+  <script>
+    const waifuList = [
+      "https://i.postimg.cc/HnmZjng1/IMG-20250426-WA0034.jpg", // Waifu 1
+      "https://i.postimg.cc/0jLBxnyZ/IMG-20250426-WA0035.jpg", // Waifu 2 (baru)
+      "https://i.postimg.cc/BbrgrzwQ/IMG-20250422-WA0010.jpg"   // Waifu 3
+    ];
+
+    function gantiWaifu(index) {
+      document.getElementById("waifuImg").src = waifuList[index];
+      document.getElementById("waifuSound").play();
+    }
+  </script>
+</body>
+</html>
